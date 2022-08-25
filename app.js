@@ -8,7 +8,8 @@ const para = document.createElement("p");
 const submitFirstButton = document.querySelector("#submitFirstButton")
 submitFirstButton.addEventListener("click", submitFirstFunction)
 const submitSecondButton = document.querySelector("#submitSecondButton")
-submitSecondButton.addEventListener("click", submitSecondFunction)
+submitSecondButton.addEventListener("click", submitSecondFunction);
+
 
 var firsNameArray = new Array();
 var secondNameArray = new Array();
@@ -64,4 +65,21 @@ function submitSecondFunction() {
         secondNameArray.push(inputText);
     }
     console.log(secondNameArray);
+}
+
+//This part does the words merging operations
+
+const displayName = document.querySelector("#displayButton");
+displayName.addEventListener("click", nameDisplay);
+var derivedName;
+
+
+function nameDisplay() {
+    for (var i = 0; i < firsNameArray.length; i++) {
+        for (let j = 0; j < secondNameArray.length; j++) {
+            derivedName = `${firsNameArray[i]} ${secondNameArray[j]}`;
+            console.log(derivedName);
+        }
+    }
+
 }
