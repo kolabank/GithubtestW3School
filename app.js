@@ -3,7 +3,7 @@ const addSecondButton = document.querySelector(".secondNameButton");
 //var sumbitFirstButton = null;
 addFirstButton.addEventListener("click", firstButtonClick);
 addSecondButton.addEventListener("click", secondButtonClick)
-const listBody = document.querySelector(".listbody");
+    //const listBody = document.querySelector(".listbody");
 const para = document.createElement("p");
 const submitFirstButton = document.querySelector("#submitFirstButton")
 submitFirstButton.addEventListener("click", submitFirstFunction)
@@ -72,6 +72,13 @@ function submitSecondFunction() {
 const displayName = document.querySelector("#displayButton");
 displayName.addEventListener("click", nameDisplay);
 var derivedName;
+var derivedNameArray = new Array();
+
+
+//Create the section that the result will be displayed
+const resultSection = document.querySelector("#result");
+const resultOl = document.createElement("ol");
+resultSection.appendChild(resultOl);
 
 
 function nameDisplay() {
@@ -79,6 +86,10 @@ function nameDisplay() {
         for (let j = 0; j < secondNameArray.length; j++) {
             derivedName = `${firsNameArray[i]} ${secondNameArray[j]}`;
             console.log(derivedName);
+            const item = document.createElement("li");
+            item.appendChild(document.createTextNode(derivedName));
+            resultOl.appendChild(item);
+
         }
     }
 

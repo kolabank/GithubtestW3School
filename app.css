@@ -3,8 +3,19 @@
     flex-direction: row;
     width: 50%;
     justify-content: space-between;
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#displayButton {
+    margin: auto;
+    text-align: center;
 }
 
 body {
-    text-align: center;
+    /* text-align: center; */
 }
